@@ -3,7 +3,7 @@
 import math 
 
 #These line of code are to take inputs from the user 
-grav_obs = float(input("Enter the observed gravity (mgal): "))
+grav_obs = float(input("Enter the observed gravity (mGal): "))
 H = float(input("Enter the Observed Height(m): "))
 Lat = float(input("Enter the latitude (Degrees): "))
 density = float(input("Enter the Density(g/cm^3)"))
@@ -30,3 +30,9 @@ FAA = grav_obs - Normal_Gravity + FAR
 
 #Bougrer Anomaly
 BA = FAA - BR
+
+#THESE LINES PRINT THE FINAL RESULT
+print("-------BELOW IS FINAL RESULTS-----")
+print("Normal Gravity is :", Normal_Gravity,"mGal")
+print("Free-Air-Anomaly is :", FAA,"mGal")
+print("Bougrer Anomaly is :", BA,"mGal")
