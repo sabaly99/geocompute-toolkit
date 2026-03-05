@@ -24,12 +24,19 @@ def dist_bear():
         ch_northings=nort_control-northings 
 			
         distance = math.sqrt(ch_eastings**2 + ch_northings**2)
+
 			
-        bearing = math.atan(ch_eastings/ch_northings)
+        bearing_Rad = math.atan(ch_eastings/ch_northings)
+        bearing_degree = math.degrees(bearing_Rad)
+
+        Degrees = int(bearing_degree)
+        Minutes = int((bearing_degree - Degrees) * 60)
+        Seconds = (bearing_degree - Degrees - (Minutes/60)) * 3600
+       # print(Degrees, Minutes, Seconds.round(4))
 			
-        bearing_degree = math.degrees(bearing)
        
-        print(f"THE DISTANCE AND BEARING OF POINT {i} is  {distance}m , {bearing_degree}" )
+       
+        print(f"THE DISTANCE AND BEARING OF POINT {i} is  {distance}m , {Degrees, Minutes, round(Seconds,4)}" )
 
 #LINE TO SHOW THE CALCULATION DONE
     print("COMPUTATION complete") 
