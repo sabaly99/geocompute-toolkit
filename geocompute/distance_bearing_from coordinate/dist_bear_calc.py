@@ -13,15 +13,17 @@ def dist_bear():
 
     for i in range(1 , points + 1):
 
-        northings = float(input("Enter the northing of point i "))
+        eastings = float(input(f"Enter the eastings of point {i} "))
+
+        northings = float(input(f"Enter the northing of point {i} "))
 	 
-        eastings = float(input("Enter the eastings of point i "))
+        
 
         ch_eastings = east_control - eastings
         
         ch_northings=nort_control-northings 
 			
-        distance = math.sqrt(ch_eastings/ch_northings)
+        distance = math.sqrt(ch_eastings**2 + ch_northings**2)
 			
         bearing = math.atan(ch_eastings/ch_northings)
 			
