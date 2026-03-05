@@ -29,6 +29,12 @@ def dist_bear():
         bearing_Rad = math.atan(ch_eastings/ch_northings)
         bearing_degree = math.degrees(bearing_Rad)
 
+        while bearing_degree < 0:
+            bearing_degree +=360
+
+        while bearing_degree > 360:
+            bearing_degree -=360
+
         Degrees = int(bearing_degree)
         Minutes = int((bearing_degree - Degrees) * 60)
         Seconds = (bearing_degree - Degrees - (Minutes/60)) * 3600
