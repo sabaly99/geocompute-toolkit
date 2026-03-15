@@ -36,7 +36,7 @@ def dist_bear():
             bearing_degree -=360
 
         Degrees = int(bearing_degree)
-        Minutes = int((bearing_degree - Degrees) * 60)
+        Minutes = int((bearinsg_degree - Degrees) * 60)
         Seconds = (bearing_degree - Degrees - (Minutes/60)) * 3600
        # print(Degrees, Minutes, Seconds.round(4))
 			
